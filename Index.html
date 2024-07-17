@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section>
+      <!-- User Sidebar Starts from Here -->
+      <div class="navbar" id="navigation">
+
+        <div class="logo"><img src="graph_17214689.png" alt="Logo"></div>
+
+        <ul class="center-nav">
+          
+          <li><i class="fas fa-house"></i><a href="#"> Dashboard </a></li>
+          <li><i class="fas fa-copy"></i><a href="#"> Users </a></li>
+          <li><i class="fas fa-chart-simple"></i><a href="#"> Reports </a></li>
+          <li><i class="fas fa-comment"></i><a href="#"> Suggestions </a></li>
+          <li>
+            <i class="fas fa-floppy-disk"></i><a href="#"> Saved Logs </a>
+          </li>
+        <ul class="bottom-nav">
+          <hr />
+          <li><i class="fas fa-gear"></i><a href="#"> Settings </a></li>
+          <li><i class="fas fa-power-off"></i><a href="#"> Logout </a></li>
+        </ul>
+      </div>
+
+      <!-- User Top Navigation Starts from Here -->
+      <div class="main-content">
+        <div class="main-top">
+          <div class="bars" id="menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <div class="input">
+            <input type="text" placeholder="Search here..." />
+          </div>
+          <div class="user">
+            <img src="user.png" alt="User" />
+          </div>
+        </div>
+
+        <!-- User Dashboard Starts from Here -->
+        <div class="dashboard">
+          <h2 class="heading">Dashboard</h2>
+          <div class="color-box">
+            <div class="box skyblue">
+              <p><i class="fas fa-thumbs-up"></i></p>
+              <p>Total Products in Market</p>
+              <h3>1,000</h3>
+            </div>
+            <div class="box yellow">
+              <p><i class="fas fa-box"></i></p>
+              <p>Total Inventory</p>
+              <h3>5,000</h3>
+            </div>
+            <div class="box purple">
+              <p><i class="fas fa-dollar-sign"></i></p>
+              <p>Daily Sales</p>
+              <h3>$1,200</h3>
+            </div>
+            <div class="box red">
+              <p><i class="fas fa-chart-line"></i></p>
+              <p>Monthly Sales</p>
+              <h3>$25,000</h3>
+            </div>
+            <div class="box green">
+              <p><i class="fas fa-user-plus"></i></p>
+              <p>users</p>
+              <h3 id="totalCustomersMetric">0</h3>
+            </div>
+            <div class="box orange">
+              <p><i class="fas fa-hand-holding-usd"></i></p>
+              <p>Total Revenue</p>
+              <h3>$150,000</h3>
+            </div>
+            <div class="box skyblue">
+              <p><i class="fas fa-thumbs-up"></i></p>
+              <p>Total Products in Market</p>
+              <h3>1,000</h3>
+            </div>
+            <div class="box yellow">
+              <p><i class="fas fa-box"></i></p>
+              <p>Total Inventory</p>
+              <h3>5,000</h3>
+            </div>
+            <div class="box purple">
+              <p><i class="fas fa-dollar-sign"></i></p>
+              <p>Daily Sales</p>
+              <h3>$1,200</h3>
+            </div>
+            <div class="box red">
+              <p><i class="fas fa-chart-line"></i></p>
+              <p>Monthly Sales</p>
+              <h3>$25,000</h3>
+            </div>
+            <div class="box green">
+              <p><i class="fas fa-user-plus"></i></p>
+              <p>users</p>
+              <h3 id="totalCustomersMetric">0</h3>
+            </div>
+            <div class="box orange">
+              <p><i class="fas fa-hand-holding-usd"></i></p>
+              <p>Total Revenue</p>
+              <h3>$150,000</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- User Activity Starts from Here -->
+<div class="activity">
+  <h2 class="heading">New Customers</h2>
+  <div class="activities">
+    <table id="activityTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Joined</th>
+          <th>Type</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+  <form id="addActivityForm">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter name" required>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter email" required>
+    </div>
+    <div>
+      <label for="joined">Joined:</label>
+      <input type="date" id="joined" name="joined" required>
+    </div>
+    <div>
+      <label for="type">Type:</label>
+      <select id="type" name="type" required>
+        <option value="New">New</option>
+        <option value="Member">Member</option>
+      </select>
+    </div>
+    <div>
+      <label for="status">Status:</label>
+      <select id="status" name="status" required>
+        <option value="Active">Active</option>
+        <option value="Inactive">Inactive</option>
+      </select>
+    </div>
+    <button type="submit" class="addBtn">Add New Customer</button>
+  </form>
+</div>
+
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
