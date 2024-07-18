@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="users.css" />
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <div class="activity">
+      <h2 class="heading">New Customers</h2>
+      <div class="activities">
+        <table id="activityTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Joined</th>
+              <th>Type</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Rows will be dynamically added here -->
+          </tbody>
+        </table>
+      </div>
+      <form id="addActivityForm">
+        <div>
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter name"
+            required
+          />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter email"
+            required
+          />
+        </div>
+        <div>
+          <label for="joined">Joined:</label>
+          <input type="date" id="joined" name="joined" required />
+        </div>
+        <div>
+          <label for="type">Type:</label>
+          <select id="type" name="type" required>
+            <option value="New">New</option>
+            <option value="Member">Member</option>
+          </select>
+        </div>
+        <div>
+          <label for="status">Status:</label>
+          <select id="status" name="status" required>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+        </div>
+        <button type="submit" class="addBtn">Add New Customer</button>
+      </form>
+    </div>
+    <script src="user.js"></script>
+  </body>
+</html>
